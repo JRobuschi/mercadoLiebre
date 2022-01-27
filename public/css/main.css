@@ -21,6 +21,7 @@ h2{
     font-size: 16;
     color: rgb(97,182,86);
     width: 70%;
+    text-align: center;
  }
  .descripciones{
     font-size: 16;
@@ -40,18 +41,14 @@ h2{
     background-color: #EAC926;
     padding: 20px;
  }
- .search {
-    background-color: white;
-    color: #808080; 
-    border: solid 5px grey;
-    box-sizing: border-box;
-    height: 100%;
-    width: 60%;
+ .search { 
     text-align: center;
     margin-left: 20px;
-   
-   
+    align-items: center;
  }
+ .search input{
+    border-color: gray;
+  }
  .compraEnCuotas{
     text-align: center;
     font-size: 16;
@@ -82,7 +79,7 @@ h2{
 
  .flex-price-info{
     display: flex;
-
+    justify-content: space-between;
  }
 
  main section .flex-container {
@@ -111,7 +108,18 @@ h2{
 .products article {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-around;
+   flex-direction: row;
+   
+   
+   
+   
+}
+.products{
+   display: flex;
+   flex-wrap: wrap;
+   flex: 1 0 90%;
+   
 }
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
  body {
@@ -167,6 +175,23 @@ h2{
     display: flex;
 
  }
+ .register-date-bar{
+   padding: 20px;
+ }
+
+ .date-bar-register{
+    margin: 20px;  
+   
+ }
+
+ .date-bar-register input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: rgb(218, 218, 218);
+    border-radius: 5px;
+    height: 30px;
+ }
   
  @media (min-width: 481px) and (max-width: 768px){
    *{
@@ -208,18 +233,25 @@ h2{
     .left-navbar{
       display: flex;
       width: 50%;
+      justify-content: space-between;
+      margin: 2px;
     }
     .right-navbar{
       display: flex;
       width: 50%;
+      justify-content: space-between;
+      margin: 2px;
+
     }
-      article {
+      .article {
        width: 50%;  
     }
     .logo {
        width: 50%;
     }
-    
+    .products article{
+       width: 50%;
+    }
     
    
     @media (min-width: 769px) {
@@ -250,8 +282,8 @@ h2{
             font-weight: 400;
             margin: 0;
         }
-         article {
-          display: flex;
+         .article {
+          
            width: 25%;
         }
         .burger-menu{
@@ -266,6 +298,9 @@ h2{
          }
          .logo {
             width: 50%;
+         }
+         .products article{
+            width: 25%;
          }
    }
 }
