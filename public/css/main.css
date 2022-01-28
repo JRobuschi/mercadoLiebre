@@ -11,6 +11,11 @@
 h2{
    padding: 10px;
 }
+
+nav.search{
+   display: flex;
+   width: 50%;
+}
 .titulares{
     font-size: 24;
     transition: .5s;
@@ -36,7 +41,7 @@ h2{
  .burger-menu{
     text-align: center;
     color: white;
-    background-color: #03264c;
+    background-color: #1259c3;
     max-width: 50px;
     display: block;
     padding: 15px 0;
@@ -84,7 +89,11 @@ h2{
     padding: 1px 15px 15px 15px;
     width: 90%;
     position: relative;
-    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;    
+    border-top: 1px solid #ebebeb;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
  }
 
  .flex-price-info{
@@ -116,12 +125,7 @@ h2{
     width: 70%;
  }
 
-.product{
-   display: flex;
-   flex-direction:column;
-   
-   
-}
+
 .products-container {
 
    display: flex;
@@ -138,7 +142,7 @@ h2{
 flex:1 0 90%;
 padding: 15px;
 margin: 15px;/*para el distanciamiento completo*/
-
+flex-direction:column;
 
 /*flexbox*/
 display: flex; /*flex container (padre) flex item (hijo). Ademas, los items dejan de ser de bloque y pasan a ser flex items*/
@@ -149,7 +153,7 @@ flex-direction: row; /*define el eje principal*/
 /*flexbox nos da propiedades para alineacion*/
 align-items: center; /*funciona en el cross*/ 
 justify-content: space-around;/*funciona para la alineacion en el eje main*/
-
+flex:1 0 45%;
 
 
 }
@@ -158,9 +162,11 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
 .product div{
    width: 100%;
    align-self: flex-start; /*todo lo que se puede aplicar con el align items tmb se puede aplicar aca pero teniendo en cuenta que ACA ES PARA UN ELEMENTO, en el otro es para todos los items de ese elemento*/
-   
+  
 }
-
+.product img{
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
 
  body {
     font-family: "Roboto", sans-serif;
@@ -235,7 +241,7 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
     width: 90%;
  }
  .logo{
-    width: 250px;
+    width: 50%;
  }
  .search{
     width: 50%;
@@ -262,16 +268,8 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
     border-radius: 5px;
     height: 30px;
  }
- .producte{
-    flex: 1 0 90%;
-    padding: 15px;
-    margin: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
- }
+ 
+ 
   .fa-truck:hover{
      transform: rotate(-90deg);
   }
@@ -282,7 +280,7 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
 
 
 
- @media (min-width: 481px) {
+ @media (min-width: 481px){
    *{
       margin:0px
    } 
@@ -292,8 +290,8 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         justify-content: space-between;
     }
     .compraEnCuotas{
-        max-width: 768;
-        text-align: center;     
+        max-width: 100%;
+        text-align: right;     
         font-size: 18px;
         font-weight: 400;
         margin: 0;
@@ -305,41 +303,50 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
     }
     .main-navbar{
         display: flex;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: space-between;    
   
     }
     .main-navbar ul{
         display: flex;
-        margin: 5px;
-        padding: 3px;
+        
     }
     .main-navbar li {
-        display: flex;
-        margin: 5px;
-        padding: 3px;
+        margin: 0px 5px;
     }
     .left-navbar{
       display: flex;
       width: 50%;
       justify-content: space-between;
       margin: 2px;
+      text-align:start;
+
     }
     .right-navbar{
       display: flex;
       width: 50%;
       justify-content: space-between;
       margin: 2px;
+      text-align: end;
 
     }
       .article {
-       width: 50%;  
+       width: 47%;  
     }
     .logo {
        width: 50%;
     }
+    .main-article{
+       border-top: 1px solid #ebebeb;
+       background-color: white;
+       padding: 15px;
+       box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
     .product {
-      flex:1 0 45%;
+       flex: 1 0 45%;
+       
+    }
+    article .product{
+       width: 47%;
     }
   }  
    
@@ -357,7 +364,7 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         }
         .main-header-top-bar{
             align-items: center;
-            display: flex;
+           
         }
         .main-navbar {
             margin-top: 25px;
@@ -365,21 +372,21 @@ justify-content: space-around;/*funciona para la alineacion en el eje main*/
         justify-content: space-between;
         }
         .main-navbar li {
-            margin: 10px;
+            margin: 0 10px;
         }
         .main-navbar a {
             font-size: 19px;
         }
         .compraEnCuotas{
             max-width: none;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 400;
             margin: 0;
         }
-         .article {
-          
-           width: 25%;
-        }
+       
+         .product{
+            flex: 1 0 20%;
+         }
         .burger-menu{
            display: none;
         }
