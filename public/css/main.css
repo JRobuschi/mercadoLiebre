@@ -400,7 +400,8 @@ flex:1 0 45%;
          .logo {
             width: 400px;
          }
-         .products article{
+        
+         article .product{
             width: 25%;
          }
    }
