@@ -17,12 +17,14 @@
    
         <div class="main-header-top-bar">
             <div class="main-header-logo-search">
-                <a class="active" href="./"><img src="/images/logo-mercado-liebre.svg" class="logo"></a>
+            <a class="active" href="./"><img src="/images/logo-mercado-liebre.svg" class="logo"></a>
 
-            <nav class=search>
+
+            <nav class="search">
                 <input type="text" name="search" placeholder="Buscar productos, marcas" ><i class="fas fa-search"></i>
                 
             </nav>
+
         </div>
 
             <h2 class="compraEnCuotas">
@@ -34,16 +36,16 @@
     
         <nav class="main-navbar">
             <ul class="left-navbar">
-                <li>Óferta</li>
-                <li>Tiendas Oficiales</li>
-                <li>Vender</li>
-                <li>Ayudas</li>
+                <a>Óferta</a>
+                <a>Tiendas Oficiales</a>
+                <a>Vender</a>
+                <a>Ayudas &nbsp</a>
             </ul>
-
+            
             <ul class="right-navbar">
-                <li>Creá tu cuenta<i class="far fa-address-card"></i></li>
-                <li>Ingresá<i class="fas fa-sign-in-alt"></i></i></li>
-                <li>Mis compras<i class="fas fa-shopping-basket"></i> </i></li>
+                <a class="active" href="./register">Creá tu cuenta &nbsp<i class="far fa-address-card"></i></a>
+                <a class="active" href="./login">Ingresá &nbsp<i class="fas fa-sign-in-alt"></i></i></a>
+                <a>Mis compras &nbsp<i class="fas fa-shopping-basket"></i> </i></a>
             </ul>
         </nav>
 
@@ -54,83 +56,102 @@
     </header>
 
     <main>
-    <form action="/registro" method="POST">
-
-        <div class="register-date-bar">
-            <div class="date-bar-register">
-                <input type="text" name="nombreYApellido" placeholder="  Nombre y Apellido" reguired>
-            </div>
-
-            <div class="date-bar-register">
-                <input type="text" name="nombreDeUsuario" placeholder="  Nombre de Usuario" reguired>
-
-            </div>
-
-            <div class="date-bar-register">
-                <input type="email"name="" placeholder="  Email" reguired>
-            </div>
-
-            <div class="date-bar-register">
-                <h3>Fecha de nacimiento</h3>
-                <input type="date" name="fechaDeNacimiento" required>
-            </div>
-
-            <div class="date-bar-register">
-                <h3>Perfil del Usuario</h3>
-                <label>
-                    <input type="checkbox" name="perfilDelUsuario">Comprador
-                </label>
-                <label>
-                    <input type="checkbox" name="perfilDelUsuario">Vendedor
-                   </label>
-            </div>
-
-            <div class="date-bar-register">
-                <h3>Interes</h3>
-                <label><input type="radio">"Electro"</label>
-                <label><input type="radio">"Moda"</label>
-                <label><input type="radio">"Hogar"</label>
-                <label><input type="radio">"Jugueteria"</label>
-                <label>"Vida sana"<input type="radio"></label>
-            </div>
-
-            <div class="date-bar-register">
-                <input type="file" name="FotoDeUsuario" accept=".jpg, .png">
-            </div>
-
-            <div class="date-bar-register">
-                <input type="password" name="contraseña" placeholder="  Contraseña" reguired>
-
-            </div>
-
-            <div class="date-bar-register">
-                <input type="password" name="confirmarContraseña" placeholder="  Confirmar Contraseña" reguired>
-            </div>
-
-            <div class="date-bar-register">
-                <button type="submit">Enviar</button>
-            </div>
-
-            <div class="date-bar-register">
-                <button type="reset">Borrar</button>
-            </div>
-
-
-            
-
-            
-
-            
-
-           
-
-            
-
-            
-
-        
-        </div>
-    </form>
+        <form action="/register" method="get" class="register-container">
+            <h3>Mi nuevo usuario!</h3>
+            <ul class="register-form">
+               <div class="form-dates">
+                  <li>
+                     <input type="text" name="name" placeholder="Nombre y apellido">
+                  </li>
+                  <li>
+                     <input type="text" name="new-user" placeholder=" Nombre de usuario">
+                  </li>
+   
+                  <div class="form-texts">
+                     <label for="birth">Fecha de nacimiento:</label>
+                  </div>
+                  <li>
+                     <input type="date" name="birth-date" placeholder="Fecha de nacimiento">
+                  </li>
+                  <li>
+                     <input type="text" name="address" placeholder="Domicilio">
+                  </li>
+                  <div class="form-texts">
+                     <label for="birth">Perfil del usuario:</label>
+                  </div>
+                  
+                  <li>
+                     
+                     <div class="texts">
+                        
+                        <label for="profile"> 
+                           <input type="radio" name="profile-user">Comprador
+                        </label>
+                        <label for="profile">
+                           <input type="radio" name="profile-user">Vendedor
+                        </label>
+                     </div>
+   
+                  </li>
+                  <div class="form-texts">
+                     <label for="categories">Intereses:</label>
+                  </div>
+                  <li>
+                     
+                     <div class="intereses">
+                        
+                        <label for="interests">
+                           <input type="checkbox" name="cat-interest" value="electro" style="width: 10%;">Electrónica
+                        </label>
+                        <br>
+                        <label>
+                           <input type="checkbox" name="cat-interest" value="fashion">Moda
+                        </label>
+                        <br>
+                        <label>
+                           <input type="checkbox" name="cat-interest" value="home">Hogar
+                        </label>
+                        <br>
+                        <label>
+                           <input type="checkbox" name="cat-interest" value="toys">Juguetería
+                        </label>
+                        <br>
+                        <label>
+                           <input type="checkbox" name="cat-interest" value="health">Vida sana
+                        </label>
+                        <br>
+                     </div>
+                  </li>
+   
+                  <div class="form-texts">
+                     <label for="img">Agregar imagen de perfil:</label>
+                  </div>
+                  <li>
+                     <input type="file" name="imagen"/>
+                  </li>
+                  <li>
+                     <input type="password" name="pass" placeholder="Contraseña">
+                  </li>
+                  <li>
+                     <input type="password" name="conf-pass" placeholder="Confirmar contraseña">
+                  </li>
+               </div>
+   
+   
+               <div class="buttons">
+   
+                  <button class="submit" type="submit"> Enviar</button>
+                  <a href="home.html"></a>
+                  <!--ver como ponerlo-->
+   
+   
+                  <button class="delete" type="reset">Borrar</button>
+               </div>
+            </ul>
+   
+   
+   
+         </form>
     </main>
 
     <footer class="main-footer">
@@ -154,7 +175,9 @@
                         porque estás siempre protegid@.</h3>
 
                     <h4 class="Copyright">Copyright © 1999-2022 MercadoLiebre S.R.L.</h4>
-
+         </div>
+            </div>
+                </div>
     </footer>
 
     </body>

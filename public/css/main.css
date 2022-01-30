@@ -14,7 +14,9 @@ h2{
 
 nav.search{
    display: flex;
-   width: 50%;
+   width: 80%;
+   
+   justify-content: center;
 }
 .titulares{
     font-size: 24;
@@ -205,6 +207,7 @@ flex:1 0 45%;
 .paragraph-3 h3 {
    font-size: 15px;
    font-weight: normal;
+   margin-bottom: 10px;
 }
 
 .Copyright {
@@ -240,6 +243,7 @@ flex:1 0 45%;
  .product_img{
     width: 90%;
  }
+ 
  .logo{
     width: 50%;
  }
@@ -273,6 +277,98 @@ flex:1 0 45%;
   .fa-truck:hover{
      transform: rotate(-90deg);
   }
+
+  .register-container {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   height: 50%;
+   margin: auto;
+   padding: 20px 30px;
+   justify-content: space-between;
+ 
+ 
+ 
+}
+ 
+.register-container ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+ 
+.register-container li {
+   margin-bottom: 10px;
+ 
+}
+ 
+.form-dates input {
+ 
+   border: none;
+   text-align: center;
+   border-radius: 4px;
+   padding: 20px;
+   width: 80%;
+}
+ 
+.form-texts {
+   font-size: 18px;
+   font-weight: bold;
+   padding: 20px;
+   padding-left: 70px;
+   width: 80%;
+   text-align: left;
+}
+ 
+.form-texts input {
+   width: 10%;
+ 
+}
+ 
+.texts{
+  
+   text-align: start;
+   padding-left: 60px;
+}
+.texts input{
+width: 10%;
+}
+ 
+ 
+ 
+.buttons button {
+   background-color: #1259c3;
+   color: white;
+   border: none;
+   width: 80%;
+   padding: 2%;
+   border-radius: 4px;
+   margin-bottom: 10px;
+}
+.buttons button:hover{
+   background-color: #0022AA;
+}
+ 
+.intereses {
+  
+   text-align: start;
+   padding-left: 60px;
+  
+}
+ 
+.intereses input{
+   width:10%;
+}
+#card:hover{
+   color:#0022AA;
+}
+#gift:hover{
+   color: #0022AA;
+}
+#shield:hover{
+   color: #0022AA;
+}
 
 
 
@@ -348,6 +444,7 @@ flex:1 0 45%;
     article .product{
        width: 47%;
     }
+    
   }  
    
 
@@ -398,10 +495,22 @@ flex:1 0 45%;
          margin: 5px;
          }
          .logo {
-            width: 400px;
+            width: 300;
          }
         
          article .product{
             width: 25%;
+         }
+         h3.compraEnCuotas{
+            width: 40%;
+         }
+         .main-footer{
+           
+           
+         }
+         .paragraph-1,.paragraph-2m, .paragraph-3{
+            
+            flex-direction: column;
+            justify-content:space-between;
          }
    }
