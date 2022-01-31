@@ -146,6 +146,7 @@ padding: 15px;
 margin: 15px;/*para el distanciamiento completo*/
 flex-direction:column;
 
+
 /*flexbox*/
 display: flex; /*flex container (padre) flex item (hijo). Ademas, los items dejan de ser de bloque y pasan a ser flex items*/
 flex-wrap: wrap ; /*cómo envolvemos los flex items -en este caso, adentro de la caja-*/
@@ -508,9 +509,9 @@ width: 10%;
            
            
          }
-         .paragraph-1,.paragraph-2m, .paragraph-3{
-            
-            flex-direction: column;
-            justify-content:space-between;
+         
+         footer.footer-position{
+            flex-direction: row;
+            justify-content: space-between;
          }
    }
